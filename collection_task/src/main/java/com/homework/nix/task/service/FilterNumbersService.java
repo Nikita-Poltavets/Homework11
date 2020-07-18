@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface FilterNumbersService {
 
-    void filterNumbersInCollection(List<String> stringList);
+    int filterNumbersInCollection(List<String> stringList);
 }

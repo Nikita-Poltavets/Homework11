@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class FilterNumbersServiceImpl implements FilterNumbersService {
 
     @Override
-    public void filterNumbersInCollection(List<String> stringList) {
+    public int filterNumbersInCollection(List<String> stringList) {
 
         List<String> allNumbersStringList = stringList.stream().map(s -> s.replaceAll("\\D+","")).collect(Collectors.toList());
 
@@ -16,6 +16,6 @@ public class FilterNumbersServiceImpl implements FilterNumbersService {
 
         int allNumbers = Integer.parseInt(stringOfNumbers);
 
-        System.out.println(allNumbers);
+        return allNumbers;
     }
 }
